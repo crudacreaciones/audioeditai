@@ -92,6 +92,20 @@ En desarrollo, la app usa automáticamente la IP del ordenador que sirve Expo (p
 Development Build. Para guardar el archivo: en Android eliges una carpeta (Storage Access Framework); en iOS se abre la
 hoja de compartir, desde donde se usa «Guardar en Archivos».
 
+### Probar en un iPhone con Expo Go
+1. Instala **Expo Go** desde la App Store (debe admitir el **SDK 58**; si dice «Project is incompatible with this version of Expo Go», actualízala).
+2. En tu ordenador, con el iPhone en la **misma Wi-Fi**:
+   ```bash
+   cd wavify/backend && python -m wavify --host 0.0.0.0 --port 8000     # backend (necesita las credenciales de Spotify)
+   cd wavify/mobile && npm install && npx expo start --go                # muestra un QR y un enlace exp://<IP>:8081
+   ```
+3. Escanea el QR con la **Cámara** del iPhone y ábrelo en Expo Go. Acepta el permiso de **Red local** que pide iOS.
+4. Si tu red no permite la conexión directa, usa el túnel: `npx expo login` y después `npx expo start --tunnel`.
+   Sin cuenta de Expo puedes usar `npx expo start --tunnel ngrok` (antes, `npm i -g @expo/ngrok`).
+
+La app usa automáticamente `http://<IP del ordenador>:8000` como backend. Con un backend publicado, define
+`EXPO_PUBLIC_API_URL=https://…` antes de `npx expo start`.
+
 ## Pruebas
 
 ```bash

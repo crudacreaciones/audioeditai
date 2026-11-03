@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "WAVIFY",
+    "slug": "wavify",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.audioeditai.wavify"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.audioeditai.wavify"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sharing"
+    ],
+    "scheme": "wavify",
+    "backgroundColor": "#0A0A0B",
+    "splash": {
+      "backgroundColor": "#0A0A0B"
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

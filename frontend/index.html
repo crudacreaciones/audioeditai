@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'">
+  <title>Spotify to WAV Converter</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo" id="brand-logo"></div>
+        <div class="brand-name">Spotify → WAV<small>Converter</small></div>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-foot">
+        <div id="foot-spotify"><span class="dot"></span>Spotify</div>
+        <div id="foot-ffmpeg"><span class="dot"></span>FFmpeg</div>
+        <div id="foot-queue" class="dim"></div>
+      </div>
+    </aside>
+    <main class="main" id="main"></main>
+    <div class="player" id="player"></div>
+  </div>
+  <div class="toasts" id="toasts"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

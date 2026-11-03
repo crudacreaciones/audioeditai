@@ -1,0 +1,25 @@
+{
+  "name": "spotify-wav-converter",
+  "productName": "Spotify to WAV Converter",
+  "version": "1.0.0",
+  "description": "Descubre música con Spotify, gestiona tu biblioteca local y convierte audio a WAV de alta calidad.",
+  "main": "main.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0"
+  },
+  "build": {
+    "appId": "com.audioeditai.spotifywav",
+    "files": ["main.js", "preload.js"],
+    "extraResources": [
+      { "from": "../backend", "to": "backend", "filter": ["swc/**/*", "requirements.txt"] },
+      { "from": "../frontend", "to": "frontend" },
+      { "from": "../run.py", "to": "run.py" }
+    ]
+  }
+}
